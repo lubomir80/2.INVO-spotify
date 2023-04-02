@@ -1,0 +1,130 @@
+$btn-play-green: 59px;
+$btn-play-green-sm: 55px; 
+
+$btn-favor-lg: 32px; 
+$btn-favor: 24px; 
+$btn-favor-sm: 26px;
+
+$btn-details-lg: 52px; 
+$btn-details-md: 46px; 
+$btn-details: 36px; 
+
+// ..........................PLAY BTN...........................
+.play__btn{
+   position: relative;
+   background-color: var(--color-green);
+   border-radius: 53px;
+   width: $btn-play-green;
+   height: $btn-play-green;
+   
+   &:hover{
+      background-color:   #65d36edc;
+   }
+
+   & svg{
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 22px;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      fill: var(--color-black);
+   }
+   @media only screen and (max-width:834px) {
+      width: $btn-play-green-sm;
+      height: $btn-play-green-sm;
+      & svg{
+         width: 20px;
+         height: 20.51px;
+      }
+   }
+}
+
+// ..........................favor BTN...........................
+.favor__btn{
+   background-color: transparent;
+   
+   & svg{
+      fill: var(--color-black);
+   }
+
+   &--md{
+      width: $btn-favor-lg;
+      height: $btn-favor-lg;
+      & svg{
+         width: $btn-favor-lg;
+         height: $btn-favor-lg; 
+      }
+   }
+
+   &--sm{
+      width: $btn-favor;
+      height: $btn-favor;
+      & svg{
+         width: $btn-favor;
+         height: $btn-favor; 
+      }
+
+   }
+      
+   
+   @media only screen and (max-width:834px) {
+      &--md{
+         width: $btn-favor-sm;
+         height: $btn-favor-sm;
+         & svg{
+            width: $btn-favor-sm;
+            height: $btn-favor-sm; 
+         }
+      }
+
+      &--sm{
+         display: none;
+         visibility: hidden;
+      }
+   }
+
+}
+
+// ..........................details BTN...........................
+
+.details__btn{
+   position: relative;
+   background-color: transparent;
+   color: var(--color-white);   
+   letter-spacing: 1px;
+   font-size: 32px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+
+   &--md{
+      width: $btn-details-lg;
+      height: $btn-details-lg;
+      font-size: 32px;
+      padding-bottom: 24px;
+      letter-spacing: 1px;
+   }
+
+   &--sm{
+      width: $btn-details;
+      height: $btn-details;
+      font-size: 18px;
+      padding-bottom: 14px;
+      letter-spacing: 1.5px;
+   }
+   @media only screen and (max-width:834px) {
+      &--md{
+         width: $btn-details-md;
+         height: $btn-details-md;  
+      }
+   }
+
+
+}
+
+
+
+

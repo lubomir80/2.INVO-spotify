@@ -1,0 +1,59 @@
+.details__btn.active .details{
+   display: block;
+}
+
+
+.details{
+   display: none;
+   z-index: 5;
+   position: absolute;
+   bottom: -378px;
+   right: 0px;
+   width: 246px;
+   padding: 16px;
+   height: 368px;
+   border-radius: var(--br-sm);
+   background-color: var(--color-grey); 
+   
+   & &__box{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      
+      &:not(:last-child):after {
+         content: " ";
+         position: absolute;
+         width: 184px;
+         height: 1px;
+         background-color: var(--color-dark-grey);
+         bottom: 0px;
+         left: 16px;
+      }
+   }
+
+   & &__item{ 
+      cursor: pointer;
+      position: relative;  
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 16px;
+      margin-bottom: -14px;
+      border-radius: var(--br-sm);
+      
+      &:last-child{
+         margin-bottom: 0;
+      }
+      &:hover{
+         background-color: var(--color-dark-grey);
+      }
+      & svg{
+         width: 12px;
+         height: 12px;
+      }
+   }
+}
